@@ -1,7 +1,7 @@
 ---
 title: 'Módulo 3: Documento HTML'
 author: "Regina Anaid Martínez Lobato"
-date: "`r Sys.Date()`"
+date: "2026-02-01"
 output:
   html_document: 
     keep_md: true
@@ -10,9 +10,7 @@ output:
     code_folding: hide 
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 ## Actividades 
 
@@ -66,18 +64,22 @@ Se aplican a las propiedades al encabezado agregando llaves seguido de las opcio
 
 Se elimina `CSS`en el encabezado YAML, y se agrega `fig_widht: 5` y `fig_height: 5`. 
 
-```{r cars}
 
+``` r
 plot(cars)
-
 ```
+
+![](index_files/figure-html/cars-1.png)<!-- -->
 
 Las medidas estándar de las figuras son 7 de ancho y 5 de alto, medidas están indicadas en pulgadas.
 
-```{r}
+
+``` r
 plot(airquality$Temp, airquality$Ozone,  
         main="Airquality: Ozone by Temperature") 
 ```
+
+![](index_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
 También se puede acceder a éstas opciones directamente dentro de `Output Options...` a la derecha del engrane de `Knit`.
 
@@ -103,20 +105,34 @@ The dataset contains 6 variables:
 
 ### Table of Top of the Air Quality Dataset
 
-```{r}
 
+``` r
 knitr::kable(head(airquality), 
                       caption = "Top of the Air Quality Dataset") 
-
 ```
+
+
+
+Table: Top of the Air Quality Dataset
+
+| Ozone| Solar.R| Wind| Temp| Month| Day|
+|-----:|-------:|----:|----:|-----:|---:|
+|    41|     190|  7.4|   67|     5|   1|
+|    36|     118|  8.0|   72|     5|   2|
+|    12|     149| 12.6|   74|     5|   3|
+|    18|     313| 11.5|   62|     5|   4|
+|    NA|      NA| 14.3|   56|     5|   5|
+|    28|      NA| 14.9|   66|     5|   6|
 
 ### Plot of Ozone by Temperature –Air Quality Dataset
 
-```{r}
+
+``` r
 plot(airquality$Temp, airquality$Ozone,  
         main="Airquality: Ozone by Temperature") 
-
 ```
+
+![](index_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ## Plegado de código
 
@@ -152,6 +168,8 @@ Se regresa a la cabecera YAML: En vez de un documento HTML se va a utilizar un d
 Tomar el documento HTML que quedó en la raíz de la carpeta, y guardar con un nombre distinto.
 
 Dar click en `File` $\rightarrow$ `Save As..` $\rightarrow$ Cambiar nombre del documento a `index.Rmd` $\rightarrow$ `Guardar`.
+
+Compilar a HTML.
 
 Se hace una copia y se pega en la carpeta de `docs`.
 

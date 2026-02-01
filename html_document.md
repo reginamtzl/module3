@@ -1,7 +1,7 @@
 ---
 title: 'Módulo 3: Documento HTML'
 author: "Regina Anaid Martínez Lobato"
-date: "`r Sys.Date()`"
+date: "2026-02-01"
 output:
   html_document: 
     keep_md: true
@@ -10,9 +10,7 @@ output:
     code_folding: hide 
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 ## Actividades 
 
@@ -66,18 +64,22 @@ Se aplican a las propiedades al encabezado agregando llaves seguido de las opcio
 
 Se elimina `CSS`en el encabezado YAML, y se agrega `fig_widht: 5` y `fig_height: 5`. 
 
-```{r cars}
 
+``` r
 plot(cars)
-
 ```
+
+![](html_document_files/figure-html/cars-1.png)<!-- -->
 
 Las medidas estándar de las figuras son 7 de ancho y 5 de alto, medidas están indicadas en pulgadas.
 
-```{r}
+
+``` r
 plot(airquality$Temp, airquality$Ozone,  
         main="Airquality: Ozone by Temperature") 
 ```
+
+![](html_document_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
 También se puede acceder a éstas opciones directamente dentro de `Output Options...` a la derecha del engrane de `Knit`.
 
@@ -103,20 +105,34 @@ The dataset contains 6 variables:
 
 ### Table of Top of the Air Quality Dataset
 
-```{r}
 
+``` r
 knitr::kable(head(airquality), 
                       caption = "Top of the Air Quality Dataset") 
-
 ```
+
+
+
+Table: Top of the Air Quality Dataset
+
+| Ozone| Solar.R| Wind| Temp| Month| Day|
+|-----:|-------:|----:|----:|-----:|---:|
+|    41|     190|  7.4|   67|     5|   1|
+|    36|     118|  8.0|   72|     5|   2|
+|    12|     149| 12.6|   74|     5|   3|
+|    18|     313| 11.5|   62|     5|   4|
+|    NA|      NA| 14.3|   56|     5|   5|
+|    28|      NA| 14.9|   66|     5|   6|
 
 ### Plot of Ozone by Temperature –Air Quality Dataset
 
-```{r}
+
+``` r
 plot(airquality$Temp, airquality$Ozone,  
         main="Airquality: Ozone by Temperature") 
-
 ```
+
+![](html_document_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ## Plegado de código
 
@@ -132,27 +148,3 @@ Mantener un documento R Markdown se agrega en la cabecera YAML `keep_md: true`
 
 En los documentos obtenidos al compilar, además del llamado *html_document.Rmd* y *el html_document.html*, se obtiene uno llamado **html_document.md**. 
 _"GitHub fue construído de forma nativa para mostrar documentos Markdown"_
-
-### Guardar el documento actual HTML en otro nombre de archivo
-
-Dar click en `File` $\rightarrow$ `Save As..` $\rightarrow$ Cambiar nombre del documento a `githubmd_document.Rmd` _(Se está creando un documento GitHub Markdown)_ $\rightarrow$ `Guardar`.
-
-Se regresa a la cabecera YAML: En vez de un documento HTML se va a utilizar un documento md, para un documento markdown y específicamente crear una variante de GitHub.
-
-```
-  md_document: 
-    variant: markdown_github
-
-```
-* Crear una carpeta `docs` dentro de la carpeta de proyecto del Módulo 3 (crear directamente en el directorio).
-* Crear una copia del documento HTML y agregarla dentro de la carpeta _(se agregó también copia de la carpeta de HTML)_.
-
-### Crear un Índice
-
-Tomar el documento HTML que quedó en la raíz de la carpeta, y guardar con un nombre distinto.
-
-Dar click en `File` $\rightarrow$ `Save As..` $\rightarrow$ Cambiar nombre del documento a `index.Rmd` $\rightarrow$ `Guardar`.
-
-Se hace una copia y se pega en la carpeta de `docs`.
-
-Compilar y sincronizar cambios con repositorio de GitHub

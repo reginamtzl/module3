@@ -3,11 +3,8 @@ title: 'Módulo 3: Documento HTML'
 author: "Regina Anaid Martínez Lobato"
 date: "`r Sys.Date()`"
 output:
-  html_document: 
-    keep_md: true
-    toc: true
-    toc_float: true
-    code_folding: hide 
+  md_document: 
+    variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}
@@ -152,6 +149,8 @@ Se regresa a la cabecera YAML: En vez de un documento HTML se va a utilizar un d
 Tomar el documento HTML que quedó en la raíz de la carpeta, y guardar con un nombre distinto.
 
 Dar click en `File` $\rightarrow$ `Save As..` $\rightarrow$ Cambiar nombre del documento a `index.Rmd` $\rightarrow$ `Guardar`.
+
+Compilar a HTML.
 
 Se hace una copia y se pega en la carpeta de `docs`.
 

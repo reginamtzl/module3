@@ -153,6 +153,8 @@ Tomar el documento HTML que quedó en la raíz de la carpeta, y guardar con un n
 
 Dar click en `File` $\rightarrow$ `Save As..` $\rightarrow$ Cambiar nombre del documento a `index.Rmd` $\rightarrow$ `Guardar`.
 
+Compilar a HTML.
+
 Se hace una copia y se pega en la carpeta de `docs`.
 
 Compilar y sincronizar cambios con repositorio de GitHub
