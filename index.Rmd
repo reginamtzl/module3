@@ -158,3 +158,5 @@ Compilar a HTML.
 Se hace una copia y se pega en la carpeta de `docs`.
 
 Compilar y sincronizar cambios con repositorio de GitHub
+
+Se publica la página web mediante Pages, en los Settings del repositorio, utilizando la carpeta `docs`.

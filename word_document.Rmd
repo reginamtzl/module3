@@ -1,0 +1,56 @@
+---
+title: "Documento de Word Módulo 3"
+author: "Regina Anaid Martínez Lobato"
+date: "`r Sys.Date()`"
+output: 
+  word_document: 
+    df_print: kable
+    reference_docx: word_styles_references.docx
+    fig_width: 5
+    fig_height: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Primera Parte
+
+Primero se va a cambiar el alto y ancho de las figuras en las opciones de salida al lado de Knit.
+Se dan los valores de 5 en ambos casos.
+
+`Knit` a Word
+
+### Crear un documento de referencia
+
+Se realiza de forma parecida a como se aplicó el CSS _(hojas de estulo en cascada)_ a los documentos HTML.
+
+Fuera de RStudio, se va a abrir Office Word y se abre el documento con formato docx que se acaba de crear.
+
+Se guarda una copia a la que se va a renombrar como `word_styles_reference.docx`
+
+En éste documento, se va a cambiar el formato de los títulos y encabezados.
+
+Dar click en la pestaña que despliega todas las opciones de título, estilos, y seleccionar opción que dice `Actualizar Título para que coincida con la selección`
+
+Se guardan los cambios y se regresa a RStudio.
+
+Dentro del encabezado YAML, se va a agregar el comando `reference_docx:`, seguido por el nombre del documento que se va a utilizar como referencia: `reference_docx: word_styles_references.docx`
+
+_**NOTA:**_ *El código asume que éste archivo se encuentra en el mismo directorio (carpeta) que el documento de Word que se está trabajando.*
+
+### Impresión y visualización de tablas
+
+Agregar al encabezado YAML
+
+* Top of the cars dataset
+
+```{r}
+head(cars)
+
+```
+
+Después de la palabra clave `word_document:`, se añade `df_print: kable`.
+
+Ésto va a utilizar la función kable del paquete knitter para imprimir el marco de datos en un formato de tabla.
+
